@@ -35,10 +35,10 @@ eval_after_steps: 1000
 
 max_eval_length: 128
 ## Data path
-pretrain_data_path: 
-train_path:
-val_path:
-predict_path:
+pretrain_data_path: "/wiki20k.csv"
+train_path: "/train.csv"
+val_path: "/dev.csv"
+predict_path: "/dev.csv"
 
 src_max_token_len: 256
 trg_max_token_len: 256

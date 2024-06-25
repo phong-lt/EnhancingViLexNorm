@@ -2,3 +2,4 @@ transformers
 yacs
 editdistance
 edit-distance
+pandas

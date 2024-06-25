@@ -5,8 +5,8 @@ from torch.utils.data import DataLoader
 
 from logger.logger import Logger
 
-from dataset import LexDataset
-from modeling import LexBARTModel, LexT5Model
+from .dataset import LexDataset
+from .modeling import LexBARTModel, LexT5Model
 
 from timeit import default_timer as timer
 from tqdm import tqdm
