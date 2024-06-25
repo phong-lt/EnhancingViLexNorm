@@ -478,10 +478,10 @@ class Executor():
             raw_srcs = [i.strip() for i in self.predict_data.src]
         else:
             preds = self.infer(self.valiter, self.config.max_eval_length)
-            gts = [i.strip() for i in self.predict_data.trg]
-            raw_srcs = [i.strip() for i in self.predict_data.src]
+            gts = [i.strip() for i in self.val_data.trg]
+            raw_srcs = [i.strip() for i in self.val_data.src]
 
-        preds = [[i.strip()] for i in preds]
+        preds = [i.strip() for i in preds]
 
         if self.mode == "predict":
             result = [{
