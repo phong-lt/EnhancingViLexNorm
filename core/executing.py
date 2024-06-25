@@ -15,11 +15,18 @@ from evaluation.err import compute_err_metrics
 
 from transformers import AutoTokenizer
 
+from transformers import set_seed
+import random
 
 
 class Executor():
     def __init__(self, config, mode = 'train', evaltype='last', predicttype='best'):
         print("---Initializing Executor---")
+
+        set_seed(config.SEED)
+        random.seed(config.SEED)
+        torch.manual_seed(config.SEED)
+
         self.mode = mode
         self.config = config
         self.evaltype = evaltype

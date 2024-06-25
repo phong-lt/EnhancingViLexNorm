@@ -1,4 +1,5 @@
 DEVICE: "cuda"
+SEED: 0
 SAVE: TRUE
 SAVE_PATH: synlexnorm_finetuning/models
 
@@ -33,17 +34,17 @@ NUM_TRAIN_STEP: 10000
 show_loss_after_steps: 200
 eval_after_steps: 1000
 
-max_eval_length: 128
+max_eval_length: 256
 ## Data path
 pretrain_data_path: "/wiki20k.csv"
 train_path: "/train.csv"
 val_path: "/dev.csv"
 predict_path: "/dev.csv"
 
-src_max_token_len: 256
-trg_max_token_len: 256
+src_max_token_len: 512
+trg_max_token_len: 512
 
 ## Predict
 get_predict_score: TRUE
-max_predict_length: 256
+max_predict_length: 512
 

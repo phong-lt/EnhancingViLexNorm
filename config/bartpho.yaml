@@ -1,4 +1,5 @@
 DEVICE: "cuda"
+SEED: 0
 SAVE: TRUE
 SAVE_PATH: synlexnorm_finetuning/models
 
