@@ -15,14 +15,14 @@ class LexBARTModel(nn.Module):
                 src_attention_mask, 
                 label_attention_mask):
 
-        encoder_outputs = self.model.encoder(
+        encoder_outputs = self.model.model.encoder(
                 attention_mask=src_attention_mask,
-                inputs_embeds=self.model.shared(input_ids),
+                inputs_embeds=self.model.model.shared(input_ids),
             ).last_hidden_state
 
-        decoder_outputs = self.model.decoder(
+        decoder_outputs = self.model.model.decoder(
             encoder_hidden_states = encoder_outputs,
-            inputs_embeds = self.model.shared(label_ids),
+            inputs_embeds = self.model.model.shared(label_ids),
             attention_mask = label_attention_mask
         ).last_hidden_state
 
