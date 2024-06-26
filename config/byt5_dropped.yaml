@@ -30,7 +30,7 @@ NUM_PRETRAIN_STEP: 5000
 show_loss_after_pretrain_steps: 200
 save_after_pretrain_steps: 2000
 
-NUM_TRAIN_STEP: 10000
+NUM_TRAIN_STEP: 5000
 show_loss_after_steps: 200
 eval_after_steps: 1000
 
