@@ -443,7 +443,7 @@ class Executor():
                         m_err = self.best_score
                         m_step = -1
                     e_train_time = timer()
-                    print(f"\n# BEST RESULT:\n\tStep: {m_step}\n\tBest F1: {m_err:.4f}")
+                    print(f"\n# BEST RESULT:\n\tStep: {m_step}\n\tBest ERR: {m_err:.4f}")
                     print(f"#----------- TRAINING END-Time: { e_train_time-s_train_time} -----------------#")
                     return
     
