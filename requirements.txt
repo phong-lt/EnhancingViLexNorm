@@ -3,3 +3,4 @@ yacs
 editdistance
 edit-distance
 pandas
+sentencepiece
