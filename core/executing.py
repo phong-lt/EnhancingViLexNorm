@@ -470,8 +470,11 @@ class Executor():
                    
                     pred = self.model.generate( input_ids = batch['input_ids'].to(self.config.DEVICE),
                                                 max_length = max_length)
-
-                    decoded_preds += self.tokenizer.batch_decode(self.infer_post_processing(pred.tolist()), skip_special_tokens=True)
+                 
+                    if self.config.modeltype == "t5":
+                        decoded_preds += self.tokenizer.batch_decode(self.infer_post_processing(pred.tolist()), skip_special_tokens=True)
+                    else:
+                        decoded_preds += self.tokenizer.batch_decode(pred, skip_special_tokens=True)
 
                     pbar.update()
 
