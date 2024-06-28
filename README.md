@@ -19,6 +19,7 @@ This repository contains code to evaluate Vietnamese lexical normalization using
 │   └── err.py
 ├── logger/
 │   └── logger.py
+├── README.md
 ├── requirements.txt
 └── run.py
 ```
